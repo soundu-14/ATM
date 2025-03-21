@@ -1,0 +1,26 @@
+balance=1000
+pin=int(input("enter pin"))
+if(pin==1234):
+    print("welcome")
+    print("1.check balance")
+    print("2.deposit money")
+    print("3.withdraw money")
+    print("4.exit")
+    choice=int(input("enter your choice"))
+    if(choice==1):
+        print("your current balance is:",balance)
+    elif(choice==2):
+        deposit=int(input("enter the amount to be deposited"))
+        balance+=deposit
+        print("your current balance is:",balance)
+    elif(choice==3):
+        withdraw=int(input("enter the amount to be withdrawn"))
+        if (withdraw > balance):
+            print("insufficient balance")
+        else:
+            balance-=withdraw
+            print(("your current balance is",balance))
+    elif(choice==4):
+        print("thank you visit again")
+    else:
+        print("invalid pin")
